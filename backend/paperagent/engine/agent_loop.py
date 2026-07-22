@@ -340,10 +340,23 @@ class AgentLoop:
         reason: str,
     ) -> None:
         for item in calls:
+            result = ToolResult(
+                call_id=item.id,
+                status=ToolResultStatus.CANCELLED,
+                error={
+                    "code": reason,
+                    "message": (
+                        "The tool call was cancelled because the node tool contract "
+                        "was already satisfied or the agent loop stopped safely."
+                    ),
+                    "category": "agent_loop_control",
+                    "retryable": False,
+                },
+            )
             messages.append(
                 ChatMessage(
                     role="tool",
-                    content=f'{{"status":"cancelled","error":{{"code":"{reason}"}}}}',
+                    content=result.model_dump_json(),
                     tool_call_id=item.id,
                     tool_name=item.name,
                 )

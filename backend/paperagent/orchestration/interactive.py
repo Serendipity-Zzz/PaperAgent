@@ -1901,7 +1901,14 @@ def _compile_plan_graph(
                     for message in upstream_result.messages:
                         if message.role != "tool":
                             continue
-                        upstream_tool = ToolResult.model_validate_json(message.content)
+                        # Checkpoints created before cancelled tool messages were emitted
+                        # as full ToolResult records can contain a legacy control payload.
+                        # It carries no canonical document data, so ignore it while keeping
+                        # valid upstream tool evidence available for deterministic render.
+                        try:
+                            upstream_tool = ToolResult.model_validate_json(message.content)
+                        except ValueError:
+                            continue
                         if not isinstance(upstream_tool.content, dict):
                             continue
                         render_candidate = upstream_tool.content.get("document")

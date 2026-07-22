@@ -18,6 +18,8 @@ from paperagent.tools import (
     ConcurrencyPolicy,
     ToolExecutor,
     ToolRegistry,
+    ToolResult,
+    ToolResultStatus,
     ToolResultStore,
     ToolSpec,
 )
@@ -261,6 +263,11 @@ async def test_agent_loop_stops_duplicate_side_effects_after_tool_contract(
     assert result.tool_call_count == 1
     assert result.rounds == 2
     assert "NODE_TOOL_CONTRACT_ALREADY_SATISFIED" in result.messages[-1].content
+    cancelled = ToolResult.model_validate_json(result.messages[-1].content)
+    assert cancelled.call_id == "duplicate"
+    assert cancelled.status is ToolResultStatus.CANCELLED
+    assert cancelled.error is not None
+    assert cancelled.error.category == "agent_loop_control"
     assert len(provider.requests) == 2
 
 
