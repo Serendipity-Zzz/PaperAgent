@@ -1,0 +1,90 @@
+schema_version: "1.0"
+packages:
+  - id: document-frameworks
+    version: "0.1.0"
+    language: [zh]
+    license: CC0-1.0
+    minimum_paperagent_version: "0.1.0"
+    content_file: document-frameworks/content.md
+    content_hash: sha256:2256247b17a429e6bf27c37f30ee15b4ea984303549b6bbcfaa75e8165192030
+    changelog_file: CHANGELOG.md
+  - id: academic-writing
+    version: "0.1.0"
+    language: [zh]
+    license: CC0-1.0
+    minimum_paperagent_version: "0.1.0"
+    content_file: academic-writing/content.md
+    content_hash: sha256:67611f3e99e4c5683fded4641bdaab01c7dc819bdcf659dcc6101dc743ac266e
+    changelog_file: CHANGELOG.md
+  - id: research-methods
+    version: "0.1.0"
+    language: [zh]
+    license: CC0-1.0
+    minimum_paperagent_version: "0.1.0"
+    content_file: research-methods/content.md
+    content_hash: sha256:bdc1eb86ffb04a5717bc4846e246255b0e874fa76a19259ada16ab40dca2783c
+    changelog_file: CHANGELOG.md
+  - id: citation-ethics
+    version: "0.1.0"
+    language: [zh]
+    license: CC0-1.0
+    minimum_paperagent_version: "0.1.0"
+    content_file: citation-ethics/content.md
+    content_hash: sha256:649557ff8d5a2ba65e4559fee69b92a1164a0807787270b6b6ccaeebea766298
+    changelog_file: CHANGELOG.md
+  - id: document-formatting
+    version: "0.1.0"
+    language: [zh]
+    license: CC0-1.0
+    minimum_paperagent_version: "0.1.0"
+    content_file: document-formatting/content.md
+    content_hash: sha256:2528ba26973c3841642b5062676d342e53cc7ac83c45b2f393d386ff16236d2c
+    changelog_file: CHANGELOG.md
+  - id: review-rubrics
+    version: "0.1.0"
+    language: [zh]
+    license: CC0-1.0
+    minimum_paperagent_version: "0.1.0"
+    content_file: review-rubrics/content.md
+    content_hash: sha256:17a4d231a8d4884f5d76870e3ab078547b81a8f42180ac38bf4edf337809d91f
+    changelog_file: CHANGELOG.md
+  - id: translation-zh-en
+    version: "0.1.0"
+    language: [zh, en]
+    license: CC0-1.0
+    minimum_paperagent_version: "0.1.0"
+    content_file: translation-zh-en/content.md
+    content_hash: sha256:f1634b9417c207562502c48c9d8ad4e5b216e921320325c25d9ca3b7f7959e90
+    changelog_file: CHANGELOG.md
+  - id: experiment-reproducibility
+    version: "0.1.0"
+    language: [zh]
+    license: CC0-1.0
+    minimum_paperagent_version: "0.1.0"
+    content_file: experiment-reproducibility/content.md
+    content_hash: sha256:41af131c1a902faf7ecb01605d82f4248de7f269d71c4ab947f11c614261399f
+    changelog_file: CHANGELOG.md
+  - id: scientific-visuals
+    version: "0.1.0"
+    language: [zh]
+    license: CC0-1.0
+    minimum_paperagent_version: "0.1.0"
+    content_file: scientific-visuals/content.md
+    content_hash: sha256:be1dcdfab4a3da6570dde7824d173242558bb557f3d9626a36907b39fd050441
+    changelog_file: CHANGELOG.md
+  - id: tool-manuals
+    version: "0.1.0"
+    language: [zh]
+    license: CC0-1.0
+    minimum_paperagent_version: "0.1.0"
+    content_file: tool-manuals/content.md
+    content_hash: sha256:c447fdae8bb206b91e30fdb377d947210a7ec1600dac57eb3488dd222be451cc
+    changelog_file: CHANGELOG.md
+  - id: faq-troubleshooting
+    version: "0.1.0"
+    language: [zh]
+    license: CC0-1.0
+    minimum_paperagent_version: "0.1.0"
+    content_file: faq-troubleshooting/content.md
+    content_hash: sha256:395f921d504ca332f1f75b3d0e48af311e46c477c59c4f51c815d7fbec8161a1
+    changelog_file: CHANGELOG.md

@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "models": {
+    "NumberingContract": [
+      "headings",
+      "lists",
+      "figures",
+      "tables",
+      "equations",
+      "appendices",
+      "page_numbers",
+      "normalized_label_hash",
+      "diagnostics",
+      "schema_version"
+    ],
+    "TypographyTheme": [
+      "id",
+      "version",
+      "archetypes",
+      "languages",
+      "page",
+      "font_roles",
+      "styles",
+      "numbering",
+      "component_tokens",
+      "visual_rules",
+      "source"
+    ],
+    "TemplateContractV2": [
+      "source_hash",
+      "package_type",
+      "page_sections",
+      "styles",
+      "semantic_style_map",
+      "numbering",
+      "theme_fonts",
+      "headers_footers",
+      "table_styles",
+      "slots",
+      "fixed_content",
+      "capabilities",
+      "fidelity_score",
+      "diagnostics",
+      "schema_version"
+    ],
+    "LayoutDecision": [
+      "theme",
+      "skill",
+      "template_contract_hash",
+      "numbering_contract_hash",
+      "style_provenance",
+      "renderer_versions",
+      "visual_profile",
+      "diagnostics"
+    ],
+    "VisualQaReport": [
+      "artifacts",
+      "pages",
+      "issues",
+      "metrics",
+      "passed"
+    ],
+    "RepairDecision": [
+      "category",
+      "repair_node",
+      "strategy",
+      "strategy_fingerprint",
+      "attempt",
+      "max_attempts"
+    ]
+  },
+  "tools": {
+    "document.numbering.inspect": "1.0.0",
+    "document.numbering.normalize": "1.0.0",
+    "document.template.inspect": "2.0.0",
+    "document.layout.resolve": "2.0.0",
+    "document.layout.patch": "1.0.0",
+    "document.render": "2.2.0",
+    "document.qa": "2.0.0",
+    "document.repair": "1.0.0"
+  },
+  "public_event_allowlist": [
+    "event",
+    "phase",
+    "diagnostic_code",
+    "format",
+    "duration_ms",
+    "document_id",
+    "revision",
+    "artifact_id",
+    "hash",
+    "skill_id",
+    "skill_version",
+    "theme_id",
+    "attempt"
+  ],
+  "forbidden_public_fields": [
+    "api_key",
+    "prompt",
+    "hidden_reasoning",
+    "document_content",
+    "template_content",
+    "field_value"
+  ]
+}

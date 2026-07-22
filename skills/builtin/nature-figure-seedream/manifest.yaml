@@ -1,0 +1,16 @@
+id: nature-figure-seedream
+name: Nature Figure Seedream Adapter
+version: 1.0.0
+source: builtin
+license: Apache-2.0
+entry: SKILL.md
+capabilities:
+  - image.generate
+permissions:
+  - network.image_api
+runtime_profile: skill-image-api
+providers:
+  - seedream
+checksum: sha256:2558aa1139f3b3cf48f4a73bc552d50f77fa593c83a370a0d777b8828a3d59ba
+enabled: false
+prompt_layer: skill

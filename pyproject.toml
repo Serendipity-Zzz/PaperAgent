@@ -1,0 +1,137 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "paperagent"
+version = "0.1.0"
+description = "Local-first multi-agent paper and report authoring workbench"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "PolyForm-Noncommercial-1.0.0" }
+authors = [{ name = "PaperAgent contributors" }]
+dependencies = [
+  "alembic>=1.15,<2",
+  "bleach>=6.2,<7",
+  "fastapi>=0.115,<1",
+  "jsonschema>=4.23,<5",
+  "langgraph>=1.2,<2",
+  "langgraph-checkpoint-sqlite>=3.1,<4",
+  "pydantic>=2.10,<3",
+  "pydantic-settings>=2.7,<3",
+  "pyyaml>=6.0,<7",
+  "python-multipart>=0.0.20,<1",
+  "sqlalchemy>=2.0,<3",
+  "structlog>=25.1,<26",
+  "uvicorn[standard]>=0.34,<1",
+]
+
+[project.optional-dependencies]
+document = [
+  "beautifulsoup4>=4.13,<5",
+  "bibtexparser>=1.4,<3",
+  "charset-normalizer>=3.4,<4",
+  "defusedxml>=0.7,<1",
+  "extract-msg>=0.54,<1",
+  "fonttools>=4.63,<5",
+  "nbformat>=5.10,<6",
+  "markdown-it-py>=4,<5",
+  "openpyxl>=3.1,<4",
+  "python-docx>=1.1,<2",
+  "python-pptx>=1.0,<2",
+  "pypdf>=5,<7",
+  "pymupdf>=1.26,<2",
+  "rispy>=0.10,<1",
+  "latex2mathml>=3.81,<4",
+  "mathml2omml>=0.0.2,<1",
+]
+knowledge = [
+  "lancedb>=0.20,<1",
+]
+experiment = [
+  "matplotlib>=3.10,<4",
+  "psutil>=6,<8",
+]
+launcher = [
+  "pillow>=11,<13",
+  "pystray>=0.19,<1",
+]
+
+[dependency-groups]
+dev = [
+  "httpx>=0.28,<1",
+  "mypy>=1.14,<2",
+  "playwright>=1.50,<2",
+  "pytest>=8.3,<10",
+  "pytest-cov>=6,<8",
+  "ruff>=0.9,<1",
+  "types-bleach>=6.2,<7",
+  "types-jsonschema>=4.23,<5",
+  "types-psutil>=7,<8",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["backend/paperagent", "launcher"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --strict-config"
+markers = [
+  "integration: cross-module integration test",
+  "contract: provider or tool contract test",
+  "e2e: end-to-end test",
+  "security: security regression test",
+  "fault: fault-injection test",
+  "performance: performance target test",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["backend", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["paperagent", "launcher"]
+mypy_path = "backend"
+warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+module = ["pystray"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = [
+  "bibtexparser",
+  "rispy",
+  "openpyxl",
+  "nbformat",
+  "extract_msg",
+  "latex2mathml.*",
+  "mathml2omml",
+]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["yaml", "defusedxml", "lancedb"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["fitz"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["fontTools.*"]
+ignore_missing_imports = true
+
+[tool.coverage.run]
+source = ["backend/paperagent"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

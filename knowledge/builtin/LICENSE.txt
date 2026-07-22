@@ -1,0 +1,2 @@
+PaperAgent built-in knowledge samples are dedicated under CC0-1.0.
+They are original minimal examples created for this project and are not authoritative academic sources.

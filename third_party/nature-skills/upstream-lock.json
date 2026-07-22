@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/Yuan1z0825/nature-skills.git",
+  "commit": "3169759afa66ef5286108b77b4a7f72544ad4d46",
+  "license": "Apache-2.0",
+  "install_mode": "complete-pinned-checkout-after-review",
+  "required_paths": [
+    "LICENSE",
+    "README.md",
+    "skills/nature-figure/SKILL.md",
+    "skills/nature-figure/manifest.yaml",
+    "skills/nature-figure/static",
+    "skills/nature-figure/references",
+    "skills/nature-figure/scripts",
+    "skills/nature-figure/assets",
+    "skills/nature-shared"
+  ]
+}

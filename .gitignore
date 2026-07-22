@@ -1,0 +1,61 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/coverage/
+*.tsbuildinfo
+
+# Runtime data and secrets
+paperagent-data/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+
+# Generated artifacts, models and experiment environments
+/artifacts/
+docs/test-reports/artifacts/
+models/
+runtimes/
+workspaces/
+checkpoints/
+*.onnx
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+.test-runtime/
+*.tmp
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini

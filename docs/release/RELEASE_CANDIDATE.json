@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0",
+  "platform": "windows-x64",
+  "release_source_commit": "5dc5ac6fb91f459792c10bacb65d6015719579c6",
+  "built_at": "2026-07-18T04:25:04.6663338Z",
+  "artifacts": [
+    {
+      "name": "PaperAgent-0.1.0-Setup.exe",
+      "size": 146049321,
+      "sha256": "ebe73c255b69416356875d58c92c1dd8bc74fbf44806af0e6b326c72d0e7d410"
+    },
+    {
+      "name": "PaperAgent-0.1.0-windows-x64.zip",
+      "size": 216427134,
+      "sha256": "cc23ab6213e6faeca07f0bc7f99d658cc35a10e49b196a2f7c859d9c89811c5a"
+    }
+  ],
+  "engineering_gate": "passed",
+  "product_owner_acceptance": "pending",
+  "evidence": {
+    "backend_selected_tests": 28,
+    "frontend_tests": 19,
+    "packaged_smoke": "passed",
+    "graphical_setup_lifecycle": "passed",
+    "real_text_provider": "passed",
+    "real_image_provider": "not_run_no_credential"
+  }
+}
+

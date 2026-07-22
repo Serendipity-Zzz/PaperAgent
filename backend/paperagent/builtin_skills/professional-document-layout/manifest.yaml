@@ -1,0 +1,22 @@
+id: professional-document-layout
+name: Professional Document Layout
+version: 1.0.0
+source: builtin
+license: PaperAgent project license
+entry: SKILL.md
+capabilities:
+  - document.numbering.inspect
+  - document.numbering.normalize
+  - document.template.inspect
+  - document.layout.resolve
+  - document.layout.patch
+  - document.render
+  - document.qa
+  - document.repair
+permissions: []
+runtime_profile: document-layout-restricted
+providers: []
+checksum: sha256:d01d963f2c70ad1007e704a272f4042cb3b0a5eeaf139ff24a92b7f16c7323e0
+enabled: true
+min_paperagent_version: 0.1.0
+prompt_layer: skill

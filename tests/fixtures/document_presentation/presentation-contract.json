@@ -1,0 +1,37 @@
+{
+  "cover": {
+    "enabled": true,
+    "title": "驻波特性实验报告",
+    "subtitle": null,
+    "fields": [
+      {"semantic_key": "author", "label": "姓名", "value": "张三", "order": 10},
+      {"semantic_key": "student_id", "label": "学号", "value": "20260001", "order": 20},
+      {"semantic_key": "class_name", "label": "班级", "value": "物理一班", "order": 30},
+      {"semantic_key": "institution", "label": "学校", "value": "某某大学", "order": 40},
+      {"semantic_key": "advisor", "label": "指导老师", "value": "李老师", "order": 50},
+      {"semantic_key": "custom.laboratory", "label": "实验室", "value": "合成测试实验室", "order": 60}
+    ]
+  },
+  "page_chrome": {
+    "different_first_page": true,
+    "different_odd_even": false,
+    "default": {
+      "header": {
+        "left": [],
+        "center": [{"kind": "text", "value": "大学物理实验报告"}],
+        "right": []
+      },
+      "footer": {
+        "left": [],
+        "center": [
+          {"kind": "text", "value": "第 "},
+          {"kind": "page_number"},
+          {"kind": "text", "value": " 页 / 共 "},
+          {"kind": "total_pages"},
+          {"kind": "text", "value": " 页"}
+        ],
+        "right": []
+      }
+    }
+  }
+}
