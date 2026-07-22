@@ -34,6 +34,13 @@ flowchart LR
 
 所有核心服务默认只监听 `127.0.0.1`。模型请求仅发送给用户主动配置的服务商；项目资料、会话、产物与运行记录默认保存在本机。
 
+## 生成示例
+
+- [驻波数值模拟与分析实验报告（PDF）](example/standing-wave-experiment-report.pdf)
+- [本次生成使用的提示词与验收信息（JSON）](example/prompt.json)
+
+该示例由 PaperAgent 实际调用文本模型、在受控任务目录运行 Python 数值模拟、收集两张实验图并完成 PDF 排版与逐页检查后生成。
+
 ## 方式一：安装包使用（推荐）
 
 1. 在 GitHub 仓库的 **Releases** 页面下载：

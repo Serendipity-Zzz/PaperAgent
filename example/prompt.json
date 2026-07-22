@@ -1,0 +1,19 @@
+{
+  "title": "驻波数值模拟与分析实验报告",
+  "language": "zh-CN",
+  "initial_prompt": "帮我生成一份关于驻波的完整中文物理实验报告，结构由你根据实验报告规范自主选择，结果输出为 PDF。\n\n必须在本任务专用目录实际运行 Python 数值模拟，不能只返回代码。模拟两端固定、长度 L=1.0 m 的理想弦，合理设置波速、振幅、模态阶数与采样参数，计算 fn=n·v/(2L)、λn=2L/n 和驻波位移。所有结果明确标为数值模拟。\n\n执行本地实验时，只能使用系统当前提供的工具名称，依次根据需要调用 machine.inspect、environment.prepare、code.materialize、process.execute、result.collect；禁止请求 bash、shell 或其他未注册工具。保存实际运行的 Python 源码、结果数据和 PNG 实验图。实验图应展示多个时刻的驻波位移，并清晰体现节点、腹点或振幅包络。\n\n随后生成实验报告。内容至少覆盖实验目的、理论原理与公式、模拟环境和参数、方法与步骤、结果分析、误差或模型局限和结论。把实际运行生成且经过验证的实验图真正嵌入正文并解释，不能使用占位图或只写路径。公式必须正常显示，结论必须与程序输出一致，章节连续组织并避免无意义空白页。\n\n最终检查 PDF 能打开、正文完整、图片已经嵌入且无裁切重叠，再将 PDF 作为主要可下载产物，同时保留 Python 源码作为关联产物。\n\n已授权在 PaperAgent 管理的本任务目录内创建或复用 uv 环境、安装必要的公开依赖、执行 Python，并写入本任务生成的源码、数据、图像和文档；不得删除或改写 PaperAgent 管理目录之外的文件。",
+  "final_render_prompt": "请将刚才驻波实验报告的第14版转换为 PDF。保持该版本正文和原有两张实验图，不要重写内容，不要重新运行实验；完成图片嵌入、PDF结构和可打开性验证后交付。",
+  "generation": {
+    "application": "PaperAgent",
+    "application_version": "0.1.0",
+    "text_provider": "Xiaomi MiMo",
+    "text_model": "mimo-v2.5-pro",
+    "generated_at": "2026-07-22",
+    "experiment_executed": true,
+    "visual_reviewed": true,
+    "semantic_reviewed": true,
+    "page_count": 7,
+    "embedded_figure_count": 2,
+    "pdf_sha256": "796256f97ec2eb2fe13072459ed494f8c31e115fe1529f97c672cc52371c6da1"
+  }
+}
